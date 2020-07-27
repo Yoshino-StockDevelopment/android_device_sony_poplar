@@ -15,4 +15,11 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_poplar.mk
+    $(LOCAL_DIR)/havoc_poplar.mk \
+    $(LOCAL_DIR)/bliss_poplar.mk
+
+COMMON_LUNCH_CHOICES := \
+    havoc_poplar-user \
+    havoc_poplar-userdebug \
+    havoc_poplar-eng \
+    bliss_poplar-userdebug 

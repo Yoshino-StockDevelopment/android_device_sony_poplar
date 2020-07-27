@@ -14,7 +14,7 @@
 # limitations under the License.
 
 ### INHERIT FROM YOSHIRO
-include device/sony/yoshino/BoardConfigPlatform.mk
+include device/sony/yoshino-common/BoardConfigPlatform.mk
 include vendor/sony/poplar/BoardConfigVendor.mk
 
 DEVICE_PATH := device/sony/poplar
@@ -25,7 +25,7 @@ PRODUCT_PLATFORM := yoshino
 TARGET_BOOTLOADER_BOARD_NAME := G8341
 
 ### KERNEL
-TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-poplar_defconfig
+TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-poplar_dsds_defconfig
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=poplar
 
@@ -44,17 +44,13 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1610612736
 
+### DISPLAY
+TARGET_SCREEN_DENSITY := 400
+
 ### LIGHTS
 TARGET_PROVIDES_LIBLIGHT := true
 
-### MODEM
-BOARD_MODEM_CUSTOMIZATIONS := true
 
-### IMS
-BOARD_IMS_CAMERA := true
-
-### VNDK
-BOARD_VNDK_VERSION := current
 
 ### SYSTEM PROPS
 # Add device-specific ones

@@ -1,7 +1,17 @@
-# Display
+# USB debugging at boot
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
 
-# Radio
+# Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.block_allow_data=1
+    ro.opa.eligible_device=true
+
+# Apex
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.apex.updatable=true
+
+# Netflix
+ro.netflix.bsp_rev=Q845-05000-1
