@@ -25,10 +25,3 @@ else # WITH_TWRP
 include $(DEVICE_PATH)/device/*.mk
 include $(DEVICE_PATH)/vendor_prop.mk
 endif # WITH_TWRP
-
-# Disable treble
-PRODUCT_FULL_TREBLE_OVERRIDE := false
-
-# Use Vulkan for UI rendering
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.hwui.renderer=skiavk

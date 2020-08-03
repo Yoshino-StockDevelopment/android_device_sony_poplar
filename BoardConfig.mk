@@ -50,7 +50,8 @@ TARGET_SCREEN_DENSITY := 400
 ### LIGHTS
 TARGET_PROVIDES_LIBLIGHT := true
 
-
+### VNDK
+BOARD_VNDK_VERSION := current
 
 ### SYSTEM PROPS
 # Add device-specific ones
